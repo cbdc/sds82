@@ -1,4 +1,4 @@
-<resource schema="whsp">
+<resource schema="sds82">
   <meta name="title">WISE High Synchroton Peak blazar candidates catalog</meta>
   <meta name="creationDate">2015-08-12T01:02:03</meta>
   <meta name="description">
@@ -56,128 +56,134 @@
   ]]> </meta>
 
   <table id="main" onDisk="True" mixin="//scs#q3cindex"
-    primary="OBJID">
-    <index columns="RA,DEC"/>
+    primary="objid">
+    <index columns="ra,dec"/>
 
     <column>
-      <values name="OBJID"/>
-      <values ucd="meta.id;meta.main"/>
-      <values description="Object ID"/>
+      <name>objid</name>
+      <ucd>meta.id;meta.main</ucd>
+      <description>"Object ID"</description>
+      <type>integer</type>
     </column>
     <column>
-      <values name="RA"/>
-      <values unit="deg"/>
-      <values ucd="pos.eq.ra;meta.main"/>
-      <values description="Right Ascension"/>
+      <name>ra</name>
+      <unit>deg</unit>
+      <ucd>pos.eq.ra;meta.main</ucd>
+      <description>"Right Ascension"</description>
     </column>
     <column>
-      <values name="DEC"/>
-      <values unit="deg"/>
-      <values ucd="pos.eq.dec;meta.main"/>
-      <values description="DeclinationOBJID"/>
+      <name>dec</name>
+      <unit>deg</unit>
+      <ucd>pos.eq.dec;meta.main</ucd>
+      <description>"DeclinationOBJID"</description>
     </column>
     <column>
-      <values name="NH"/>
-      <values unit="cm-2"/>
-      <values ucd="phys.columnDensity"/>
-      <values description="Total HI column density"/>
+      <name>nh</name>
+      <unit>cm-2</unit>
+      <ucd>phys.columnDensity</ucd>
+      <description>"Total HI column density"</description>
     </column>
     <column>
-      <values name="ENERGY_SLOPE"/>
-      <values ucd="spect.index"/>
-      <values description="Hard/Soft flux ratio"/>
+      <name>energy_slope</name>
+      <ucd>spect.index</ucd>
+      <description>"Hard/Soft flux ratio"</description>
     </column>
     <column>
-      <values name="ENERGY_SLOPE_ERROR"/>
+      <name>energy_slope_error</name>
+      <ucd>stat.error;spect.index</ucd>
+      <type>text</type>
+      <description>"Hard/Soft flux ratio error"</description>
       <values nullLiteral="-999"/>
-      <values ucd="stat.error;spect.index"/>
-      <values description="Hard/Soft flux ratio error"/>
     </column>
     <column>
-      <values name="EXPOSURE_TIME"/>
-      <values unit="s"/>
-      <values ucd="time.duration;obs.exposure"/>
-      <values description="Total exposure time (non-contiguous)"/>
+      <name>exposure_time</name>
+      <unit>s</unit>
+      <ucd>time.duration;obs.exposure</ucd>
+      <description>"Total exposure time (non-contiguous)"</description>
     </column>
     <column>
-      <values name="nufnu_3keV"/>
-      <values unit="erg.s-1.cm-2"/>
-      <values ucd="phot.flux;em.X-ray"/>
-      <values description="Full band nuFnu-flux at 3keV"/>
+      <name>nufnu_3000ev</name>
+      <unit>erg.s-1.cm-2</unit>
+      <ucd>phot.flux;em.X-ray</ucd>
+      <description>"Full band nuFnu-flux at 3000eV"</description>
+      <type>double precision</type>
     </column>
     <column>
-      <values name="nufnu_error_3keV"/>
-      <values unit="erg.s-1.cm-2"/>
-      <values ucd="stat.error;phot.flux;em.X-ray"/>
-      <values description="Full band nuFnu-flux at 3keV"/>
+      <name>nufnu_error_3000ev</name>
+      <unit>erg.s-1.cm-2</unit>
+      <ucd>stat.error;phot.flux;em.X-ray</ucd>
+      <description>"Full band nuFnu-flux at 3000eV"</description>
+      <type>double precision</type>
     </column>
     <column>
-      <values name="nufnu_0.5keV"/>
-      <values unit="erg.s-1.cm-2"/>
-      <values null="-999"/>
-      <values ucd="phot.flux;em.X-ray.soft"/>
-      <values description="soft nuFnu-flux at 0.5keV"/>
+      <name>nufnu_500ev</name>
+      <unit>"erg.s-1.cm-2"</unit>
+      <values nullLiteral="-999"/>
+      <ucd>"phot.flux;em.X-ray.soft"</ucd>
+      <description>"soft nuFnu-flux at 500ev"</description>
     </column>
     <column>
-      <values name="nufnu_error_0.5keV"/>
-      <values unit="erg.s-1.cm-2"/>
-      <values null="-999"/>
-      <values ucd="stat.error;phot.flux;em.X-ray.soft"/>
-      <values description="soft nuFnu-flux at 0.5keV"/>
+      <name>nufnu_error_500ev</name>
+      <unit>"erg.s-1.cm-2"</unit>
+      <values nullLiteral="-999"/>
+      <ucd>"stat.error;phot.flux;em.X-ray.soft"</ucd>
+      <description>"soft nuFnu-flux at 500ev"</description>
     </column>
     <column>
-      <values name="upper_limit_0.5keV"/>
-      <values unit="erg.s-1.cm-2"/>
-      <values null="-999"/>
-      <values ucd="phot.flux;em.X-ray.soft;stat.max"/>
-      <values description="medium nuFnu-flux at 0.5keV"/>
+      <name>upper_limit_500ev</name>
+      <unit>"erg.s-1.cm-2"</unit>
+      <values nullLiteral="-999"/>
+      <ucd>"phot.flux;em.X-ray.soft;stat.max"</ucd>
+      <description>"medium nuFnu-flux at 500ev"</description>
     </column>
     <column>
-      <values name="nufnu_1.5keV"/>
-      <values unit="erg.s-1.cm-2"/>
-      <values null="-999"/>
-      <values ucd="phot.flux;em.X-ray.medium"/>
-      <values description="medium nuFnu-flux at 1.5keV"/>
+      <name>nufnu_1500ev</name>
+      <unit>"erg.s-1.cm-2"</unit>
+      <values nullLiteral="-999"/>
+      <ucd>"phot.flux;em.X-ray.medium"</ucd>
+      <description>"medium nuFnu-flux at 1500ev"</description>
     </column>
     <column>
-      <values name="nufnu_error_1.5keV"/>
-      <values unit="erg.s-1.cm-2"/>
-      <values null="-999"/>
-      <values ucd="stat.error;phot.flux;em.X-ray.medium"/>
-      <values description="medium nuFnu-flux at 1.5keV"/>
+      <name>nufnu_error_1500ev</name>
+      <unit>"erg.s-1.cm-2"</unit>
+      <values nullLiteral="-999"/>
+      <ucd>"stat.error;phot.flux;em.X-ray.medium"</ucd>
+      <description>"medium nuFnu-flux at 1500ev"</description>
     </column>
     <column>
-      <values name="upper_limit_1.5keV"/>
-      <values unit="erg.s-1.cm-2"/>
-      <values null="-999"/>
-      <values ucd="phot.flux;em.X-ray.medium;stat.max"/>
-      <values description="medium nuFnu-flux at 1.5keV"/>
+      <name>upper_limit_1500ev</name>
+      <unit>"erg.s-1.cm-2"</unit>
+      <values nullLiteral="-999"/>
+      <ucd>"phot.flux;em.X-ray.medium;stat.max"</ucd>
+      <description>"medium nuFnu-flux at 1500ev"</description>
     </column>
     <column>
-      <values name="nufnu_4.5keV"/>
-      <values unit="erg.s-1.cm-2"/>
-      <values null="-999"/>
-      <values ucd="phot.flux;em.X-ray.hard"/>
-      <values description="hard nuFnu-flux at 4.5keV"/>
+      <name>nufnu_4500ev</name>
+      <unit>"erg.s-1.cm-2"</unit>
+      <values nullLiteral="-999"/>
+      <ucd>"phot.flux;em.X-ray.hard"</ucd>
+      <description>"hard nuFnu-flux at 4500ev"</description>
     </column>
     <column>
-      <values name="nufnu_error_4.5keV"/>
-      <values unit="erg.s-1.cm-2"/>
-      <values null="-999"/>
-      <values ucd="stat.error;phot.flux;em.X-ray.hard"/>
-      <values description="hard nuFnu-flux at 4.5keV"/>
+      <name>nufnu_error_4500ev</name>
+      <unit>"erg.s-1.cm-2"</unit>
+      <values nullLiteral="-999"/>
+      <ucd>"stat.error;phot.flux;em.X-ray.hard"</ucd>
+      <description>"hard nuFnu-flux at 4500ev"</description>
     </column>
     <column>
-      <values name="upper_limit_4.5keV"/>
-      <values unit="erg.s-1.cm-2"/>
-      <values null="-999"/>
-      <values ucd="phot.flux;em.X-ray.hard;stat.max"/>
-      <values description="hard nuFnu-flux at 4.5keV"/>
+      <name>upper_limit_4500ev</name>
+      <unit>"erg.s-1.cm-2"</unit>
+      <values nullLiteral="-999"/>
+      <ucd>"phot.flux;em.X-ray.hard;stat.max"</ucd>
+      <description>"hard nuFnu-flux at 4500ev"</description>
     </column>
+<!--
+-->
   </table>
 
   <data id="import">
-    <sources>data/sds82.csv</sources>
+    <sources>sds82.csv</sources>
     <!-- The input assumes a dump from the web site file with the HTML
       junk at the foot removed and everything at the top removed
       down to (but not including) the line with the column indices -->
@@ -200,7 +206,7 @@
       <FEED source="//scs#coreDescs"/>
     </dbCore>
 
-    <publish render="scs.xml" sets="ivo_managed"/>
+    <publish render="scs.xml" sets="local"/>
     <publish render="form" sets="local"/>
     <outputTable verbLevel="20"/>
   </service>
