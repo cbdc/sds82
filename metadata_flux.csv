@@ -1,7 +1,7 @@
 name             unit            null    ucd               description         
 OBJID               none            none    meta.id;meta.main       "Object ID"         
 RA                  deg             none    pos.eq.ra;meta.main     "Right Ascension"   
-DEC                 deg             none    pos.eq.dec;meta.main    "Declination"OBJID
+DEC                 deg             none    pos.eq.dec;meta.main    "Declination"
 NH                  cm-2            none    phys.columnDensity      "Total HI column density"
 ENERGY_SLOPE        none            none    spect.index             "Hard/Soft flux ratio"
 ENERGY_SLOPE_ERROR  none            -999    stat.error;spect.index   "Hard/Soft flux ratio error"
