@@ -138,7 +138,7 @@
   </table>
 
   <data id="import">
-    <sources>sds82.csv</sources>
+    <sources>countrate/sds82.csv</sources>
     <csvGrammar/>
     <make table="main">
       <rowmaker idmaps="*"/>
